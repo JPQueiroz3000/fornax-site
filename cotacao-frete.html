@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornax — Calcular Frete</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo-fornax.png" alt="Fornax" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#produtos">Produtos</a></li>
+                    <li><a href="index.html#performance">Performance</a></li>
+                    <li><a href="index.html#especificacoes">Especificações</a></li>
+                    <li><a href="cotacao-frete.html">Calcular Frete</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="index.html#comprar" class="btn-primary">Comprar Agora</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shipping Calculator Section -->
+    <section class="shipping-calculator">
+        <div class="container">
+            <h2 class="section-title">Calcular Frete</h2>
+            <p class="section-subtitle">Simule o valor do frete para sua região</p>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="product-select">Selecione o Produto:</label>
+                    <select id="product-select">
+                        <option value="">Selecione um produto</option>
+                        <option value="frigideira-26cm" data-width="26" data-height="5" data-length="45" data-weight="1.5" data-price="250">Frigideira 26cm</option>
+                        <option value="frigideira-15cm" data-width="15" data-height="4" data-length="30" data-weight="0.8" data-price="150">Frigideira 15cm</option>
+                        <option value="paellera-26cm" data-width="26" data-height="4" data-length="26" data-weight="1.2" data-price="200">Paellera 26cm</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cep-input">CEP de Destino:</label>
+                    <input type="text" id="cep-input" placeholder="Ex: 00000-000" maxlength="9">
+                </div>
+                <button id="calculate-shipping-btn" class="btn-primary">Calcular Frete</button>
+                <div id="shipping-results" class="shipping-results">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo-fornax.png" alt="Fornax" class="footer-logo">
+                    <p class="footer-tagline">Utensílios de Alta Performance</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>fornax@fornaxutensilios.com</p>
+                    <p>Desenvolvido para cozinhas exigentes</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fornax. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cotacao-frete.js"></script>
+</body>
+</html>
+
