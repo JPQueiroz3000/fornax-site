@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve seu Utensílio - Fornax</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo-fornax.png" alt="Fornax" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#produtos">Produtos</a></li>
+                    <li><a href="index.html#performance">Performance</a></li>
+                    <li><a href="index.html#especificacoes">Especificações</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="index.html" class="btn-secondary">Voltar ao site</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Reservation Form Section -->
+    <section class="reservation-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1 class="form-title">Reserve seu Utensílio Fornax</h1>
+                    <p class="form-subtitle">
+                        Nossos produtos estão em produção. Preencha o formulário abaixo para garantir o seu e ser notificado quando estiver disponível.
+                    </p>
+                </div>
+
+                <form id="reservationForm" class="reservation-form-content" action="enviar-reserva.php" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sobrenome">Sobrenome *</label>
+                            <input type="text" id="sobrenome" name="sobrenome" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">WhatsApp *</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="produto">Produto de interesse *</label>
+                        <select id="produto" name="produto" required>
+                            <option value="">Selecione o produto</option>
+                            <option value="frigideira-profissional">Frigideira Profissional</option>
+                            <option value="paellera-rasa">Paellera Rasa</option>
+                            <option value="frigideira-15cm">Frigideira 15cm</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações (opcional)</label>
+                        <textarea id="observacoes" name="observacoes" rows="4" placeholder="Alguma informação adicional sobre sua necessidade..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="concordo" name="concordo" required>
+                            <span class="checkmark"></span>
+                            Concordo em receber contato sobre venda do produto ao clicar em enviar
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span class="btn-text">Enviar Reserva</span>
+                            <span class="btn-loading" style="display: none;">Enviando...</span>
+                        </button>
+                        <a href="index.html" class="btn-secondary">Cancelar</a>
+                    </div>
+                </form>
+
+                <div id="success-message" class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22,4 12,14.01 9,11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Reserva enviada com sucesso!</h3>
+                    <p>Obrigado pelo seu interesse. Entraremos em contato em breve com mais informações sobre seu produto Fornax.</p>
+                    <a href="index.html" class="btn-primary">Voltar ao site</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo-fornax.png" alt="Fornax" class="footer-logo">
+                    <p class="footer-tagline">Utensílios de Alta Performance</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>contato@fornaxutensilios.com</p>
+                    <p>Desenvolvido para cozinhas exigentes</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fornax. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="reserva.js"></script>
+</body>
+</html>
+
